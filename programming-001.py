@@ -6,15 +6,10 @@ import xlsxwriter
 
 def main(argv):
     filename = sys.argv[1]
-    sum_by = sys.argv[2]
-    if sum_by == 'sku':
-	sum_by_sku(filename)
-    elif sum_by == 'brand':
-        sum_by_brand(filename)
-    elif sum_by == 'customer':
-        sum_by_customer(filename)
-    elif sum_by == 'address':
-	sum_by_address(filename)
+    sum_by_sku(filename)
+    sum_by_brand(filename)
+    sum_by_customer(filename)
+    sum_by_address(filename)
 
 def sum_by_sku(filename): 
     # Create a workbook and add a worksheet.
@@ -223,5 +218,5 @@ def sum_by_address(filename):
 	row += 1
 
 if __name__ == "__main__":
-    main(sys.argv[1:2])
+    main(sys.argv[1:])
     print 'Done!!'
